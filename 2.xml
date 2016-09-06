@@ -1,0 +1,88 @@
+<shapes>
+
+     <triangle>
+         <color>first</color>
+         <side>3</side>
+         <side>4</side>
+         <side>5</side>
+     </triangle>
+
+
+    <square>
+        <color>grey</color>
+        <side>7</side>
+    </square>
+
+
+    <rectangle>
+        <color>yellow</color>
+        <side> 6</side>
+        <side>3</side>
+    </rectangle>
+
+
+
+
+    <circle>
+        <color>orange</color>
+        <diameter>1.5</diameter>
+    </circle>
+
+    <circle>
+        <color>red</color>
+        <diameter>2.5</diameter>
+    </circle>
+
+    <circle>
+        <color>black</color>
+        <diameter>3.5</diameter>
+    </circle>
+
+
+
+    <square>
+        <color>black</color>
+        <side>4</side>
+    </square>
+
+    <square>
+        <color>yellow</color>
+        <side>6</side>
+    </square>
+
+    <triangle>
+        <color>middle</color>
+        <side>4</side>
+        <side>2</side>
+        <side>3</side>
+    </triangle>
+
+    <circle>
+        <color>white</color>
+        <diameter>4.5</diameter>
+    </circle>
+
+    <square>
+        <color>blue</color>
+        <side>5</side>
+    </square>
+
+    <circle>
+        <color>green</color>
+        <diameter>5.5</diameter>
+    </circle>
+
+    <rectangle>
+        <color>qwerty</color>
+        <side> 4</side>
+        <side>7</side>
+    </rectangle>
+
+    <triangle>
+        <color>last</color>
+        <side>3</side>
+        <side>4</side>
+        <side>6</side>
+    </triangle>
+
+</shapes>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="sg.group.test.task:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/sg_group_test_task_jar</output-path>
+    <root id="archive" name="sg.group.test.task.jar">
+      <element id="module-output" name="sg.group.test.task" />
+    </root>
+  </artifact>
+</component>
