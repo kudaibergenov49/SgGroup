@@ -1,32 +1,42 @@
-import static java.lang.Math.sqrt;
+import java.util.List;
 
-/**
- * Created by Storm on 06.09.2016.
- * @author Kudaibergen Kuanysh
- * Методы класса Calculate есть в классе Handler
- * Класс Calculate описывает методы вычисления
- * площади для различных фигур.
- * Для класса Calculate записан JUnit-test(модульное тестирование): CalculateTest.java
- */
-public class Calculate {
-    static double triangle(double a,double b, double c) // вычислим площадь треугольгика
-    {
-        double p = (a+b+c)/2;
-        return sqrt(p*(p-a)*(p-b)*(p-c));
-    }
+import static java.lang.Math.*;
 
-    static double circle(double a) // круга
-    {
-        return Math.PI*a*a/8;
-    }
+class Calculate {
 
-    static double square(double a)
-    {
-        return a*a;
-    } //квадрата
+	static void calculate(int number, String figure, String color, List<Double> params) {
+		try {
+			switch (figure) {
+				case TRIANGLE:
+					double aSide = nvl(params.get(0), 0.0);
+					double bSide = nvl(params.get(1), 0.0);
+					double cSide = nvl(params.get(2), 0.0);
+					double p = (aSide + bSide + cSide) / 2;
+					System.out.println(number + ": " + color + " - " + sqrt(p * (p - aSide) * (p - bSide) * (p - cSide)));
+					break;
+				case SQUARE:
+					System.out.println(number + ": " + color + " - " + pow(nvl(params.get(0), 0.0), 2));
+					break;
+				case RECTANGLE:
+					System.out.println(number + ": " + color + " - " + nvl(params.get(0), 0.0) * nvl(params.get(1), 0.0));
+					break;
+				case CIRCLE:
+					System.out.println(number + ": " + color + " - " + PI * pow(nvl(params.get(0), 0.0), 2) / 8);
+					break;
+				default:
+					break;
+			}
+		} catch (IndexOutOfBoundsException e) {
+			System.out.println(number + ": " + color + " - Не хватает параметров для вычисления площади");
+		}
+	}
 
-    static double rectangle(double a,double b)
-    {
-        return a*b;
-    } //четырехугольника
+	private static <T> T nvl(T param, T defaultParam) {
+		return param == null ? defaultParam : param;
+	}
+
+	static final String TRIANGLE = "triangle";
+	static final String SQUARE = "square";
+	static final String RECTANGLE = "rectangle";
+	static final String CIRCLE = "circle";
 }
